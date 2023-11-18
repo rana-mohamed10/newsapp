@@ -112,44 +112,5 @@ class _NewsListWidgetState extends State<NewsListWidget> {
           }
       }
     },);
-    //   FutureBuilder(
-    //   future: ApiManager.getNews(widget.source.id,page:widget.page ),
-    //   builder: (context, snapshot) {
-    //     if (snapshot.connectionState == ConnectionState.waiting && widget.newsList.isEmpty) {
-    //       return Center(child: CircularProgressIndicator());
-    //     } else if (snapshot.hasError || snapshot.data?.status == 'error') {
-    //       return Center(
-    //         child: Column(
-    //           children: [
-    //             Text(snapshot.data?.message ?? snapshot.error.toString()),
-    //             ElevatedButton(onPressed: () {
-    //               ApiManager.getNews(widget.source.id,page:widget.page );}
-    //                 , child: Text('Try Again')),
-    //           ],
-    //         ),
-    //       );
-    //     }
-    //     print('${widget.page} nextttt $nextPage');
-    //     if(widget.newsList.isEmpty || nextPage){
-    //       widget.newsList.addAll(snapshot.data?.articles ??[]);
-    //       print('ANA SPONGEBOB ${widget.newsList}');
-    //       nextPage=false;
-    //     }
-    //     return ListView.builder(
-    //       controller: Scrollcontroller,
-    //       itemBuilder: (context, index) {
-    //         return InkWell(
-    //           onTap: (){
-    //             Navigator.of(context).pushNamed(
-    //               NewsDetails.routeName,
-    //               arguments: NewsWidget(widget.newsList[index]),
-    //             );
-    //           },
-    //             child: NewsWidget(widget.newsList[index]));
-    //       },
-    //       itemCount: widget.newsList.length,
-    //     );
-    //   },
-    // );
   }
 }

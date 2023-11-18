@@ -60,28 +60,6 @@ class _CategoryDetailsState extends State<CategoryDetails> {
 
         }
     },);
-      // FutureBuilder(
-      //   future: ApiManager.getSources(category.id),
-      //   builder: (context, snapshot) {
-      //     if(snapshot.connectionState==ConnectionState.waiting){
-      //       return Center(child: CircularProgressIndicator());
-      //     }
-      //     else if(snapshot.hasError || snapshot.data?.status=='error'){
-      //       return Center(
-      //         child: Column(
-      //           children: [
-      //             Text(snapshot.data?.message ?? snapshot.error.toString()),
-      //             ElevatedButton(
-      //                 onPressed: (){
-      //                   ApiManager.getSources(category.id);},
-      //                 child: Text(AppLocalizations.of(context)!.try_again))
-      //           ],
-      //         ),
-      //       );
-      //     }
-      //     var sourceList= snapshot.data?.sources;
-      //    return SourcesTabWidget(sourceList!);
-      //   },);
 
   }
 }
