@@ -8,7 +8,7 @@ import 'package:newsapp/Model/SourcesResponse/SourcesResponse.dart';
 //kotty: 1399683c36cd4cd7897abab28c11f791
 class ApiManager {
   static const baseUrl='newsapi.org';
-  static const apiKey="95cf08f0a0944aed82c95acde9acd38e";
+  static const apiKey="1399683c36cd4cd7897abab28c11f791";
  static Future<SourcesResponse> getSources (String categoryId) async{
     var uri=Uri.https(baseUrl,'v2/top-headlines/sources',
     {
@@ -22,14 +22,14 @@ class ApiManager {
   return sourcesResponse;
   }
 
-  static Future <NewsResponse> getNews (String? sourceId,{String? query,String? id,required int page}) async{
+  static Future <NewsResponse> getNews (String? sourceId,{String? query,String? id, int? page,int? pageSize}) async{
     var url= Uri.https(baseUrl,'v2/everything',
       {
         "apiKey":apiKey,
         "sources":sourceId,
         'q': query,
         "page":'$page',
-        "pageSize":"5"
+        "pageSize":"$pageSize"
       });
     var response= await http.get(url);
     print(response.body);

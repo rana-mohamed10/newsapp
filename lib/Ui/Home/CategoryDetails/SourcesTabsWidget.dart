@@ -34,15 +34,7 @@ class _SourcesTabWidgetState extends State<SourcesTabWidget> {
                 widget.sources.indexOf(source)==selectedIndex
               )).toList()
           ),
-          Expanded(child: NewsListWidget(widget.sources[selectedIndex],
-            onRefresh: (){
-              setState(() {
-                widget.sources[selectedIndex].page = 1;
-                widget.sources[selectedIndex].newsList = [];
-                widget.sources[selectedIndex].nextPage = false;
-              });
-          },
-          ))
+          Expanded(child: NewsListWidget(widget.sources[selectedIndex],))
         ],
       ),
     );
